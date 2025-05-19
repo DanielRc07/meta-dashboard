@@ -1,20 +1,20 @@
 [
     {
-      "campaign": "Campaña A",
+      "campaign": "Campaña A - 2025",
       "metrics": {
-        "Impresiones": 4500,
-        "Alcance": 3000,
-        "Clics": 250,
-        "CTR (%)": 5.6
+        "Impresiones": 2246,
+        "Alcance": 117,
+        "Clics": 6,
+        "CTR (%)": 0.27
       }
     },
     {
-      "campaign": "Campaña B",
+      "campaign": "Campaña B - 2024",
       "metrics": {
-        "Impresiones": 8000,
-        "Alcance": 6000,
-        "Clics": 600,
-        "CTR (%)": 7.5
+        "Impresiones": 642,
+        "Alcance": 39,
+        "Clics": 0,
+        "CTR (%)": 0
       }
     }
   ]

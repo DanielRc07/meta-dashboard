@@ -6,28 +6,46 @@ async function fetchData() {
 }
 
 function createChart(labels, values) {
-  const ctx = document.getElementById('metricsChart').getContext('2d');
-  if (chartInstance) chartInstance.destroy();
-  chartInstance = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels,
-      datasets: [{
-        label: 'Métricas',
-        data: values,
-        backgroundColor: ['#4285F4', '#0F9D58', '#F4B400', '#DB4437']
-      }]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        y: {
-          beginAtZero: true
+    const ctx = document.getElementById('metricsChart').getContext('2d');
+    if (chartInstance) chartInstance.destroy();
+  
+    chartInstance = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          label: 'Métricas',
+          data: values,
+          backgroundColor: ['#4285F4', '#0F9D58', '#F4B400', '#DB4437']
+        }]
+      },
+      options: {
+        plugins: {
+          datalabels: {
+            anchor: 'end',
+            align: 'top',
+            formatter: function(value) {
+              return value;
+            },
+            font: {
+              weight: 'bold'
+            }
+          },
+          legend: {
+            display: true
+          }
+        },
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
         }
-      }
-    }
-  });
-}
+      },
+      plugins: [ChartDataLabels]
+    });
+  }
+  
 
 async function updateChart() {
   const data = await fetchData();
