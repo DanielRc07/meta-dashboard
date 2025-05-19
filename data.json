@@ -1,0 +1,21 @@
+[
+    {
+      "campaign": "Campaña A",
+      "metrics": {
+        "Impresiones": 4500,
+        "Alcance": 3000,
+        "Clics": 250,
+        "CTR (%)": 5.6
+      }
+    },
+    {
+      "campaign": "Campaña B",
+      "metrics": {
+        "Impresiones": 8000,
+        "Alcance": 6000,
+        "Clics": 600,
+        "CTR (%)": 7.5
+      }
+    }
+  ]
+  
